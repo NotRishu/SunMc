@@ -1,0 +1,141 @@
+# ============================================================
+# SunMc Practice Plugin - Main Configuration
+# ============================================================
+
+messages:
+  prefix: "&c&lSun&6Mc &8» &r"
+  no-permission: "&cYou don't have permission to do that."
+  player-only: "&cThis command can only be used by players."
+  arena-not-found: "&cArena '{arena}' not found."
+  kit-not-found: "&cKit '{kit}' not found."
+  duel-sent: "&aYou sent a duel request to &e{player}&a."
+  duel-received: "&e{player} &ahas challenged you to a duel! &7(/duel accept)"
+  duel-accepted: "&aYou accepted the duel request."
+  duel-declined: "&cYou declined the duel request."
+  duel-expired: "&cYour duel request to &e{player} &chas expired."
+  duel-starting: "&aYour duel starts in &e{seconds} &aseconds!"
+  match-start: "&a&lFight!"
+  match-end-win: "&a&lYou won the match!"
+  match-end-lose: "&c&lYou lost the match."
+  not-in-match: "&cYou are not in a match."
+  already-in-match: "&cYou are already in a match."
+  party-created: "&aParty created! Use the Party Menu item to manage it."
+  party-full: "&cThe party is full."
+  party-not-found: "&cParty not found or you are not in one."
+  ffa-joined: "&aYou joined the FFA arena &e{arena}&a."
+  ffa-left: "&cYou left the FFA arena."
+  loadout-saved: "&aLoadout saved successfully."
+  loadout-loaded: "&aLoadout &e{loadout} &aloaded."
+  arena-saved: "&aArena &e{arena} &asaved successfully."
+  arena-regen: "&7Arena &e{arena} &7is regenerating..."
+  arena-ready: "&aArena &e{arena} &ais ready!"
+  boundary-set: "&aBattle region boundary set for arena &e{arena}&a."
+
+duel:
+  request-timeout: 30
+  countdown: 5
+  end-delay: 3
+  allow-spectate: true
+
+arena:
+  default-auto-regen: true
+  boundary-enforce: true
+  regen-delay-ticks: 20
+
+kit:
+  default-loadouts: 3
+  extra-items-enabled: false
+
+party:
+  max-size: 10
+  item:
+    material: IRON_SWORD
+    name: "&c&lParty Menu"
+    lore:
+      - "&7Right-click to open your party menu."
+    slot: 8
+
+ffa:
+  spawn-protection-seconds: 3
+
+scoreboard:
+  enabled: true
+  title: "&c&l⚔ &6SunMC &c&l⚔"
+  update-interval-ticks: 20
+  lines:
+    - "&7&m-----------"
+    - "&eKills: &c{kills}"
+    - "&eKillstreak: &6{killstreak}"
+    - "&eMax KS: &c{max_killstreak}"
+    - "&eDeaths: &7{deaths}"
+    - "&eMatches: &f{matches}"
+    - "&7&m-----------"
+    - "&6play.sunmc.net"
+
+leaderboard:
+  update-interval-seconds: 60
+  types:
+    - kills
+    - killstreak
+    - max_killstreak
+    - deaths
+    - matches
+
+gui:
+  kit-editor:
+    title: "&c&lKit Editor &8| &e{kit}"
+    rows: 6
+    save-slot: 49
+    reset-slot: 45
+    leave-slot: 53
+    save-item:
+      material: LIME_DYE
+      name: "&a&lSave Kit"
+    reset-item:
+      material: RED_DYE
+      name: "&c&lReset Kit"
+    leave-item:
+      material: BARRIER
+      name: "&c&lLeave Editor"
+  extra-items:
+    title: "&6&lExtra Items &8| &e{kit}"
+    rows: 4
+  duel-props:
+    title: "&c&lDuel Options"
+    rows: 1
+    leave-slot: 0
+    leave-item:
+      material: RED_BED
+      name: "&c&lLeave Duel"
+    loadout-slot: 4
+    loadout-item:
+      material: CHEST
+      name: "&e&lChange Loadout"
+    kit-slot: 8
+    kit-item:
+      material: DIAMOND_SWORD
+      name: "&b&lChange Kit"
+  party-menu:
+    title: "&c&lParty Menu"
+    rows: 3
+    split-slot: 10
+    split-item:
+      material: BLAZE_ROD
+      name: "&e&lParty Split"
+      lore:
+        - "&7Split your party into two teams."
+    fight-slot: 13
+    fight-item:
+      material: IRON_SWORD
+      name: "&c&lParty Fight"
+      lore:
+        - "&7Fight within your party."
+    vs-slot: 16
+    vs-item:
+      material: NETHER_STAR
+      name: "&d&lParty vs Party"
+      lore:
+        - "&7Challenge another party."
+  loadout-selector:
+    title: "&e&lSelect Loadout"
+    rows: 1

@@ -1,0 +1,44 @@
+name: SunMc
+version: '${project.version}'
+main: dev.sunmc.SunMc
+api-version: '1.21'
+description: High-performance Practice/Duels plugin
+authors: [SunMc Team]
+
+commands:
+  arena:
+    description: Arena management commands
+    usage: /arena <create|delete|list|duplicate|setregen|setboundary>
+    permission: sunmc.admin
+  kit:
+    description: Kit management commands
+    usage: /kit <create|delete|list|edit>
+    permission: sunmc.admin
+  duel:
+    description: Duel commands
+    usage: /duel <player>
+    permission: sunmc.use
+  ffa:
+    description: FFA commands
+    usage: /ffa <join|leave|list>
+    permission: sunmc.use
+  party:
+    description: Party commands
+    usage: /party <create|invite|leave|split|fight|vs>
+    permission: sunmc.use
+  leaderboard:
+    description: Manage leaderboards
+    usage: /leaderboard <name>
+    permission: sunmc.admin
+  sunmc:
+    description: Main plugin command
+    usage: /sunmc <reload|stats>
+    permission: sunmc.admin
+
+permissions:
+  sunmc.admin:
+    description: Full admin access
+    default: op
+  sunmc.use:
+    description: Use practice features
+    default: true
